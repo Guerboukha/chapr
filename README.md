@@ -21,7 +21,7 @@ To determine the number of columns in the vulnerable table, I began with a basic
     ') UNION SELECT null, null, null--
   This confirmed that the table had three columns.
 
-  ![Alt Text](1.png)
+  ![Alt Text](1.PNG)
 
 ### Step 2: Determining Column Data Types
   Next, I tested the data types for each column by replacing null with test values:
@@ -29,7 +29,7 @@ To determine the number of columns in the vulnerable table, I began with a basic
     ') UNION SELECT 1, 'a', 'a'--
   The query executed successfully, indicating the first column was of type int and the other two were string.
 
-  ![Alt Text](2.png)
+  ![Alt Text](2.PNG)
 
 ### Step 3: Enumerating Tables
   To identify all tables in the database, I executed the following payload:
@@ -39,7 +39,7 @@ To determine the number of columns in the vulnerable table, I began with a basic
         
                   ___youw1lln3verfindmyfl4g___.
 
-  ![Alt Text](3.png)
+  ![Alt Text](3.PNG)
 
 ### Step 4: Enumerating Columns in the Target Table
    I then explored the columns of the target table using this payload:
@@ -50,7 +50,7 @@ To determine the number of columns in the vulnerable table, I began with a basic
               id
               fstbg0adwb8f5upmg
               
-  ![Alt Text](4.png)
+  ![Alt Text](4.PNG)
     
 ### Step 5: Retrieving the Flag
   Finally, I crafted a payload to extract the contents of the table:
@@ -62,7 +62,7 @@ To determine the number of columns in the vulnerable table, I began with a basic
                     FCSC{edfaeb139255929e55a3cffe9f3f37cd4e871e5015c4d4ade2b02d77d44019e5}
   Final Results:
   
-![Alt Text](5.png)
+![Alt Text](5.PNG)
 
   
   The SQL injection exploitation confirmed the vulnerability and successfully extracted the flag.
